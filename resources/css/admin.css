@@ -1,0 +1,324 @@
+/* Styling container utama */
+.container {
+    background: #F3F4F6;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    max-width: 70%;
+    margin: auto;
+}
+
+/* judul */
+.header-user {
+    text-align: center;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #0056b3;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    text-align: left;
+    padding-left: 20px;
+}
+.header-user h1 {
+    font-size: 20px;
+    margin: 0;
+    font-weight: bold;
+    color: #0056b3;
+}
+
+/* sekat */
+.divider {
+    width: 1px;
+    background-color: #ccc;
+    margin: 0 20px;
+}
+
+/* Styling tabel */
+.table {
+    background: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+}
+
+.table thead {
+    background: #007bff;
+    color: white;
+}
+
+.table th, .table td {
+    text-align: center;
+    vertical-align: middle;
+    padding: 12px;
+}
+
+.table td {
+    text-align: center;
+}
+
+.table .deskripsi-kapolsek {
+    text-align: left;
+}
+
+.table td img {
+    display: block;
+    margin: 0 auto; /* Memastikan gambar berada di tengah */
+}
+
+
+/* Styling untuk gambar di tabel */
+.table img {
+    align-items: center;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    padding: 3px;
+    background: #fff;
+    width: 80px;
+    height: auto;
+}
+
+/* Styling untuk tambahpolsek */
+.btninti {
+    border-radius: 5px;
+    padding: 8px 12px;
+    font-weight: bold;
+    background: #007bff;
+    border: none;
+    float: right;
+    margin-bottom: 5px;
+}
+
+.btninti:hover {
+    background: #007bff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2)
+}
+
+/* Styling untuk aksi */
+.btn {
+    display: inline-flex;
+    align-items: center;  /* Pusatkan vertikal */
+    justify-content: center; /* Pusatkan horizontal */
+    border-radius: 5px;
+    padding: 8px 12px;
+    font-size: 14px;
+    gap: 5px; /* Beri jarak jika ada teks di sebelah ikon */
+}
+
+.btn, .btninti i {
+    font-size: 18px; /* Sesuaikan ukuran ikon */
+    line-height: 1;
+}
+
+.btn-danger {
+    padding: 8px 12px;
+}
+
+form {
+    display: inline;
+}
+
+
+
+.btn-primary {
+    background: #007bff;
+    border: none;
+    position: absolute;
+    right: 100px;
+    top: 20px;
+}
+
+.btn-primary:hover {
+    background: #007bff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2)
+}
+
+.btn-info {
+    background: #17a2b8;
+    border: none;
+}
+
+.btn-info:hover {
+    background: #17a2b8;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2)
+}
+
+.btn-warning {
+    background: #ffc107;
+    border: none;
+    color: black;
+}
+
+.btn-warning:hover {
+    background: #ffc107;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2)
+}
+
+.btn-danger {
+    background: #dc3545;
+    border: none;
+}
+
+.btn-danger:hover {
+    background: #dc3545;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2)
+}
+
+form {
+    display: inline;
+}
+
+
+/* Tambahkan gaya pada tombol Tambah Polsek agar berada di kanan */
+.position-relative {
+    position: relative;
+}
+
+.position-absolute {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+
+/* Styling untuk card */
+.card {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 800px;
+    overflow: hidden;
+}
+
+.card-header {
+    background: #007bff;
+    color: white;
+    padding: 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.card-header h2 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+/* body card admin layanan */
+.card-body {
+    padding: 20px;
+}
+
+/* Styling untuk form */
+.edit-form .form-group {
+    margin-bottom: 20px;
+}
+
+.edit-form .form-label {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.edit-form .form-control {
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    width: 100%;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+.edit-form .form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+.edit-form .img-preview {
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    padding: 5px;
+    background: #fff;
+    margin-top: 10px;
+    max-width: 100%;
+    height: auto;
+}
+
+/* css halaman create layanan */
+.create-form .form-group {
+    margin-bottom: 20px;
+}
+
+.create-form .form-label {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.create-form .form-control {
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    width: 100%;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+.create-form .form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+.create-form .img-preview {
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    padding: 5px;
+    background: #fff;
+    margin-top: 10px;
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* Styling untuk tombol */
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.btn-save {
+    background: #007bff;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn-save:hover {
+    background: #0056b3;
+}
+
+.btn-cancel {
+    background: #6c757d;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn-cancel:hover {
+    background: #5a6268;
+}
