@@ -1,16 +1,16 @@
 <!-- Navbar Atas -->
-<nav class="navbar navbar-dark bg-dark py-2">
+<nav class="navbar navbar-dark bg-dark py-1 fixed-top">
     <div class="container d-flex justify-content-between">
         <!-- Ikon Media Sosial -->
         <div>
             <a href="#" target="_blank" class="text-white me-3">
                 <i class="fab fa-instagram fa-lg"></i>
             </a>
+            <a href="#" target="_blank" class="text-white me-3">
+                <i class="fab fa-twitter fa-lg"></i>
+            </a>
             <a href="https://wa.me/6281234567890" target="_blank" class="text-white me-3">
                 <i class="fab fa-whatsapp fa-lg"></i>
-            </a>
-            <a href="#" target="_blank" class="text-white">
-                <i class="fab fa-twitter fa-lg"></i>
             </a>
         </div>
 
@@ -24,7 +24,7 @@
 </nav>
 
 <!-- Navbar Utama -->
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+<nav class="navbar navbar-expand-lg navbar-dark navbar-main mt-4 fixed-top" id="mainNav">
     <div class="container">
         <a class="navbar-brand" href="{{ route('index') }}">
             <img src="{{ asset('assets/img/logos/logo_polri.png') }}" alt="..." />
@@ -54,26 +54,15 @@
                     </ul>
                 </li>
 
+
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="javascript:void(0)" id="informasiDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="javascript:void(0)" id="fiturDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         SATFUNG
                     </a>
-                    <ul class="dropdown-menu" aria-labelledby="informasiDropdown">
-                        <li><a class="dropdown-item" href="{{ route('sat_binmas') }}">Sat Binmas</a></li>
-                        <li><a class="dropdown-item" href="{{ route('bag_perencanaan') }}">Bagian Perencanaan</a></li>
-                        <li><a class="dropdown-item" href="{{ route('bag_sumda') }}">Bagian Sumda</a></li>
-                        <li><a class="dropdown-item" href="{{ route('bag_operasi') }}">Bagian Operasi</a></li>
-                        <li><a class="dropdown-item" href="{{ route('sat_intelkam') }}">Sat Intelkam</a></li>
-                        <li><a class="dropdown-item" href="{{ route('sat_lantas') }}">Sat Lantas</a></li>
-                        <li><a class="dropdown-item" href="{{ route('sat_narkoba') }}">Sat Narkoba</a></li>
-                        <li><a class="dropdown-item" href="{{ route('sat_reskrim') }}">Sat Reskrim</a></li>
-                        <li><a class="dropdown-item" href="{{ route('sat_sabhara') }}">Sat Sabhara</a></li>
-                        <li><a class="dropdown-item" href="{{ route('sat_tahti') }}">Sat Tahti</a></li>
-                        <li><a class="dropdown-item" href="{{ route('si_keuangan') }}">Si Keuangan</a></li>
-                        <li><a class="dropdown-item" href="{{ route('si_pengawas') }}">Si Pengawas</a></li>
-                        <li><a class="dropdown-item" href="{{ route('si_propam') }}">Si Propam</a></li>
-                        <li><a class="dropdown-item" href="{{ route('sie_tik') }}">SIE TIK</a></li>
-                        <li><a class="dropdown-item" href="{{ route('sie_umum') }}">SIE Umum</a></li>
+                    <ul class="dropdown-menu" aria-labelledby="fiturDropdown">
+                        @foreach(\App\Models\Satfung::all() as $satf)
+                            <li><a class="dropdown-item" href="{{ route('satfung.show', $satf->id) }}">{{ $satf->nama_satfung }}</a></li>
+                        @endforeach
                     </ul>
                 </li>
 

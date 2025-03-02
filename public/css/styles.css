@@ -3939,6 +3939,10 @@ fieldset:disabled .btn {
   color: var(--bs-navbar-active-color);
 }
 
+.navbar a {
+    text-decoration: none;
+}
+
 .navbar-collapse {
   flex-basis: 100%;
   flex-grow: 1;
@@ -11695,7 +11699,7 @@ section#contact {
   padding: 0;
   background-color: rgba(33, 37, 41, 0.9);
   color: #333; 
-  padding-top: 120px;
+  margin-top: 150px;
 }
 /* .container-sambutankap {
   width: 80%;

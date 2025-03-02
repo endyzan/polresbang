@@ -32,7 +32,7 @@ Technologies used in the project:
 *   Laravel 8.1
 *   css (tailwind)
 *   laravel breeze (admin)
-*   
+
 
 Use this for login admin (open on http://127.0.0.1:8000/login):
 

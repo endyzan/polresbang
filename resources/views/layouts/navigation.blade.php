@@ -4,16 +4,16 @@
         <div class="flex justify-between items-center py-2">
             <div class="flex space-x-4">
                 <!-- Social Media Links -->
-                <a href="#" class="text-gray-300 hover:text-white">
+                <a href="#" class="text-gray-100 hover:text-white">
                     <i class="fab fa-facebook-f"></i>
                 </a>
-                <a href="#" class="text-gray-300 hover:text-white">
+                <a href="#" class="text-gray-100 hover:text-white">
                     <i class="fab fa-twitter"></i>
                 </a>
-                <a href="#" class="text-gray-300 hover:text-white">
+                <a href="#" class="text-gray-100 hover:text-white">
                     <i class="fab fa-instagram"></i>
                 </a>
-                <a href="#" class="text-gray-300 hover:text-white">
+                <a href="#" class="text-gray-100 hover:text-white">
                     <i class="fab fa-linkedin-in"></i>
                 </a>
             </div>
@@ -45,6 +45,11 @@
                     <!-- dashboard -->
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
+                    </x-nav-link>
+
+                    <!-- Satfung -->
+                    <x-nav-link :href="route('admin.satfung.index')" :active="request()->routeIs('admin.satfung.*')">
+                        {{ __('Satfung') }}
                     </x-nav-link>
 
                     <!-- layanan -->

@@ -10,11 +10,11 @@
         <!-- iconbootsrap -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
 
+        <!-- icon fontawesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
         <!-- alpine.js -->
         <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
-
-        <!-- TinyMCE CDN (advance text di deskripsi kapolsk)-->
-        <script src="https://cdn.tiny.cloud/1/1bs7zobfm5rqmd45xvcbj36oedbxw6ke3eyzhpp3mn7dmrju/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
@@ -44,5 +44,8 @@
                 @yield('content')
             </main>
         </div>
+
+        <!-- load script tinymce -->
+        @stack('scripts')
     </body>
 </html>

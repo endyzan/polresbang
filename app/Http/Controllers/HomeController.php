@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\Polsek;
+use App\Models\Satfung;
 
 use Illuminate\Http\Request;
 
@@ -36,6 +37,13 @@ class HomeController extends Controller
     {
         return view('sejarah');
     }
+
+
+
+
+
+
+
 
     public function satBinmas()
     {
@@ -112,6 +120,13 @@ class HomeController extends Controller
         return view('sie_umum');
     }
 
+
+
+
+
+
+
+
     public function sim()
     {
         return view('sim');
@@ -131,6 +146,10 @@ class HomeController extends Controller
     {
         return view('call_center');
     }
+
+
+
+    
 
     public function polsekKamal()
     {
@@ -217,7 +236,11 @@ class HomeController extends Controller
         return view('polsek_kokop');
     }
 
-
+    public function showSatfung($id)
+    {
+        $satf = Satfung::findOrFail($id);
+        return view('satfung.show', compact('satfung'));
+    }
 
 
     public function showPolsek($id)

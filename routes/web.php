@@ -7,6 +7,7 @@ use App\Http\Controllers\Admin\PolsekController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Admin\SpktKegiatanController;
 use App\Http\Controllers\Admin\SkcksaranaController;
+use App\Http\Controllers\Admin\SatfungController;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
@@ -30,7 +31,7 @@ Route::middleware('auth')->group(function () {
     })->name('dashboard');
 });
 
-// Grup Route untuk Admin (Memerlukan Autentikasi)
+// Grup Route Admin polres (Memerlukan Autentikasi)
 Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function () {
     // CRUD Polsek (Resource Controller)
     Route::resource('polsek', PolsekController::class);
@@ -41,6 +42,26 @@ Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function () 
 
 // Route untuk menampilkan detail Polsek di frontend
 Route::get('/polsek/{id}', [PolsekController::class, 'show'])->name('polsek.show');
+
+
+
+
+// grup route admin satfung (Memerlukan Autentikasi)
+Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function () {
+    // CRUD Satfung (Resource Controller)
+    Route::resource('satfung', SatfungController::class);
+
+    // Route khusus untuk halaman tambah Satfung (Create)
+    Route::get('/satfung/create', [SatfungController::class, 'create'])->name('satfung.create');
+});
+
+// Route untuk menampilkan detail Satfung di frontend
+Route::get('/satfung/{id}', [SatfungController::class, 'show'])->name('satfung.show');
+
+
+
+
+
 
 Route::prefix('admin')->name('admin.')->middleware(['auth'])->group(function () {
     Route::resource('layanan', App\Http\Controllers\Admin\LayananController::class)->except(['edit', 'update', 'show']);
@@ -55,7 +76,6 @@ Route::prefix('admin')->name('admin.')->middleware(['auth'])->group(function () 
 });
 
 Route::get('/sarana-prasarana', [SkcksaranaController::class, 'index'])->name('sarana.prasarana');
-
 
 
 
